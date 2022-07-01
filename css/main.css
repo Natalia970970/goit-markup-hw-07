@@ -296,7 +296,7 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
-.page-header .secondary-logo-color-theme-light {
+.page-header .logo__light {
   color: #000000;
 }
 .page-header .menu__link {
@@ -312,10 +312,11 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
-.page-header .menu__link.current {
+.page-header .menu__link--current {
   position: relative;
+  color: var(--accent-color);
 }
-.page-header .menu__link.current::after {
+.page-header .menu__link--current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -398,7 +399,7 @@ body {
   display: flex;
 }
 
-.main-logo-color {
+.logo__accent {
   color: var(--accent-color);
 }
 

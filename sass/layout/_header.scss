@@ -9,7 +9,7 @@
         line-height: 1.19;
         letter-spacing: 0.03em;
     }
-    .secondary-logo-color-theme-light {
+    .logo__light {
         color: #000000;
     }
     .menu__link {
@@ -27,8 +27,9 @@
         transition-duration: 250ms;
         transition-timing-function: var(--timing-function);
 
-        &.current {
+        &--current {
             position: relative;
+            color: var(--accent-color);
         
             &::after {
                 content: '';
@@ -132,7 +133,7 @@
 .contacts-list {
     display: flex;
 }
-.main-logo-color {
+.logo__accent {
     color: var(--accent-color);
 }
 .contacts-list__item.header{
