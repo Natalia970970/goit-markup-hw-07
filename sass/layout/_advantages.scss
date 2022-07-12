@@ -1,13 +1,19 @@
 .advantages-list {
-    display: flex;
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
 
 .advantages-item {
-    margin-right: 30px;
-    max-width: 270px;
+    @include tablet {
+        width: calc((100% - 30px) / 2);
+    }
 
-    &:last-child {
-        margin-right: 0;
+    @include desktop {
+        width: calc((100% - 30px) / 4);
+        max-width: 270px;
     }
 }
 
@@ -32,11 +38,21 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-text-color);
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 .advantages-text {
+    min-height: 50px;
+
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+
+    @include desktop {
+        min-height: 75px;
+    }
 }

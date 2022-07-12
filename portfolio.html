@@ -50,6 +50,51 @@
                     </a>
                 </li>
             </ul>
+            <button type="button" class="menu-open-btn">
+                <svg class="menu-open-icon" width="40px" height="40px">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mob-menu mob-container is-hidden">
+            <button type="button" class="close-open-btn">
+                <svg class="menu-close-icon" width="40px" height="40px">
+                    <use href="./images/icons.svg#icon-close_menu"></use>
+                </svg>
+            </button>
+            <div class="mob-menu-top">
+                <ul class="mob-nav-menu list">
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__link link" href="./index.html">Студия</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__link link" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__link link" href="#">Контакты</a>
+                    </li>
+                </ul>    
+            </div>
+            <div class="mob-menu-bottomm">
+                <ul class="mob-contacts-list list">
+                    <li class="mob-contacts-list__item  header">
+                        <a class="mob-contacts-list__link email link" href="mailto:info@devstudio.com">
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="mob-contacts-list__item  header">
+                        <a class="mob-contacts-list__link tel link" href="tel:+380961111111">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-mobaile list">
+                    <li class="list-mobaile__item"><a href="" class="list-mobaile__link">Instagram</a></li>
+                    <li class="list-mobaile__item"><a href="" class="list-mobaile__link">Twitter</a></li>
+                    <li class="list-mobaile__item"><a href="" class="list-mobaile__link">Facebook</a></li>
+                    <li class="list-mobaile__item"><a href="" class="list-mobaile__link">LinkedIn</a></li>
+                </ul>       
+            </div>
         </div>
     </header>
     <main>
@@ -159,8 +204,10 @@
                 </ul>
             </div>
         </section>
-        <footer class="page-footer">
-            <div class="container footer-container">
+    </main>
+    <footer class="page-footer">
+        <div class="container footer-container">
+            <div class="contacts-join">
                 <div class="footer-address">
                     <a class="logo link" href="" lang="en">
                         <span class="main-logo-color">Web</span><span class="secondary-logo-color">Studio</span>
@@ -211,16 +258,17 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <form class="subscribe-form">
-                    <p class="subscribe-label">Подпишитесь на рассылку</p>
-                    <div class="subscribe-wrap">
-                        <input type="email" name="mail" id="mail" placeholder="E-mail" class="subscribe-input">
-                        <button type="submit" class="subscribe-btn">Подписаться</button>        
-                    </div>
-                </form>
+                </div>    
             </div>
-        </footer>
-        </main>
+            <form class="subscribe-form">
+                <p class="subscribe-label">Подпишитесь на рассылку</p>
+                <div class="subscribe-wrap">
+                    <input type="email" name="mail" id="mail" placeholder="E-mail" class="subscribe-input">
+                    <button type="submit" class="subscribe-btn">Подписаться</button>        
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

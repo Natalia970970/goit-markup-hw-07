@@ -18,8 +18,8 @@
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
 
-    min-height: 581px;
-    min-width: 528px;
+    min-height: 609px;
+    min-width: 290px;
     padding: 40px;
 
     background-color: #ffffff;
@@ -31,7 +31,14 @@
     .backdrop.is-hidden & {
         transform: translate(-50%,-50%) scale(0);
     }
-    
+    @include mobile {
+        min-width: 450px;
+    }
+    @include desktop {
+        min-height: 581px;
+        min-width: 528px;
+        padding: 40px;    
+    }
 }
 
 .modal-close-btn {
@@ -81,7 +88,7 @@
 
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: calc(23 /20);
     text-align: center;
     letter-spacing: 0.03em;
 
@@ -172,15 +179,33 @@
 }
 
 .check-text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    font-size: 6px;
+    line-height: calc(24 / 24);
+    letter-spacing: 0.02em;
 
     color: #757575;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+        font-size: 12px;
+        line-height: calc(24 / 12);
+    }
+
+    @include tablet {
+        font-size: 12px;
+        line-height: calc(24 / 12);
+    }
+
+    @include desktop {
+        font-size: 14px;
+        line-height: calc(24 / 14);
+    }
+
+
+
 
     a {
         color: var(--accent-color);

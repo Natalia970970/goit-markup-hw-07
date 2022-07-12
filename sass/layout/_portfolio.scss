@@ -1,13 +1,27 @@
 .button-list {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap ;
+
+    @include tablet {
+        justify-content: center;
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: center;    
+    }
 }
 
 .button-item {
     margin-right: 8px;
     &:last-child {
         margin-right: 0;
+    }
+    margin-bottom: 15px;
+
+    @include tablet {
+        margin-bottom: 0;
     }
 }
 
@@ -44,11 +58,12 @@
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 34px;
+    gap: 30px;
 }
 
 .portfolio-item {
-    margin-right: 30px;
+    min-width: 290px;
+
     margin-bottom: 30px;
 
     transition-property: box-shadow;
@@ -61,12 +76,27 @@
         0px 4px 4px rgba(0, 0, 0, 0.06), 
         1px 4px 6px rgba(0, 0, 0, 0.16);
     }
-    &:nth-child(3n) {
-        margin-right: 0;
+
+    @include mobile {
+        min-height: 404px;
+        min-width: 450px;
     }
-    &:nth-last-child(-n+3) {
+
+    @include tablet {
+
+        width: calc((100% - 30px) / 2);
+        min-width: 354px;
+        min-height: 440px;
+
         margin-bottom: 0;
     }
+
+    @include desktop {
+        width: calc((100% - 60px) / 3);
+        max-width: 370px;
+        min-height: 404px;
+    }
+
 }
 
 
